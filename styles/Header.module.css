@@ -1,6 +1,6 @@
 .header{
     width: 100%; 
-    position: fixed;
+    position: sticky;
     background-color: var(--background-color);
     box-shadow: 10px 5px 10px #888888;
 }

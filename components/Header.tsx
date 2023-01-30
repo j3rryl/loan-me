@@ -14,12 +14,12 @@ const Header = () => {
                     </Link>
                 </li>
                 <li className={styles.link}>
-                    <Link href='/loans'>
+                    <Link href='loans'>
                         Apply Loan
                     </Link>
                 </li>
                 <li className={styles.link}>
-                    <Link href='/about'>
+                    <Link href='about'>
                         About
                     </Link>
                 </li>

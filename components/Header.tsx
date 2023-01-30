@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
 import styles from '../styles/Header.module.css'
+import { signIn,signOut, useSession } from 'next-auth/react'
 
 const Header = () => {
+    const {data:session, status} = useSession()
   return (
     <header className={styles.header}>
         <nav className={styles.nav}>
@@ -25,13 +27,33 @@ const Header = () => {
                 </li>
             </ul>
             <ul >
+                {!session &&(
                 <li className={styles.link}>
-                    <Link href='/'>
-                        Sign In
+                    <Link href='/api/auth/signin' 
+                    onClick={(e) => {
+                    e.preventDefault()
+                        signIn()
+                        }
+                    }
+                    >
+                    Sign In
                     </Link>
                 </li>
+                )}
+                {session && (
                 <li className={styles.link}>
-                    <Link href='/'>
+                    <Link href='/api/auth/signout' 
+                        onClick={(e) => {
+                        e.preventDefault()
+                        signOut()
+                      }}
+                      >
+                        Sign Out
+                    </Link>
+                </li>
+                )}
+                 <li className={styles.link}>
+                    <Link href='contact' >
                         Contact
                     </Link>
                 </li>

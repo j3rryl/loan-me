@@ -7,8 +7,8 @@ import GoogleProvider from "next-auth/providers/google"
 export default NextAuth({
     providers: [
         GithubProvider({
-      clientId: 'fe14a853bf703ad85715',
-      clientSecret: '04cdd4ec7cb2556ca38e7a6da5629bda315a1646',
+      clientId: `${process.env.GITHUB_CLIENT_ID}`,
+      clientSecret: `${process.env.GITHUB_CLIENT_SECRET}`,
       // https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps
       // @ts-ignore
       scope: "read:user",

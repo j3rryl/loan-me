@@ -2,6 +2,8 @@ import '../styles/globals.css'
 import type { AppContext, AppInitialProps, AppLayoutProps, AppProps } from 'next/app'
 import { NextComponentType } from 'next'
 import Header from '../components/Header'
+import { SessionProvider } from 'next-auth/react'
+
 
 
 const App: NextComponentType<AppContext, AppInitialProps, AppLayoutProps> = ({
@@ -17,8 +19,10 @@ const App: NextComponentType<AppContext, AppInitialProps, AppLayoutProps> = ({
   }
   return(
     <>
+    <SessionProvider>
     <Header/>
     <Component {...pageProps}/>
+    </SessionProvider>
     </>
   )
 }

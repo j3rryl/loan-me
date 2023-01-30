@@ -29,6 +29,13 @@ const Header = () => {
             <ul >
                 {!session &&(
                 <li className={styles.link}>
+                    {/* <button 
+                     onClick={() => {
+                        signIn('github')
+                            }
+                        }>
+                        Sign In
+                    </button> */}
                     <Link href='/api/auth/signin' 
                     onClick={(e) => {
                     e.preventDefault()

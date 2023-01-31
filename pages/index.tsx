@@ -14,7 +14,7 @@ export default function Home() {
         {/* <Cards/> */}
       </div>
       <div className={`${styles.container} ${styles.container2}`}>
-        <h2>Signed in as {session?.user?.email}</h2>
+        <h2>Signed in as {session?.user?.name}</h2>
 
       </div>
       {/* <div className='h-screen'>

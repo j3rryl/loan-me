@@ -3,4 +3,4 @@ GITHUB_CLIENT_SECRET=04cdd4ec7cb2556ca38e7a6da5629bda315a1646
 DB_PASSWORD=Pacaholik!1
 DB_USER=j3rryl
 AUTH_SECRET=abcdef
-MONGODB_URI=mongodb+srv://$DB_USER:$DB_PASSWORD@cluster0.aemchr1.mongodb.net/?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://j3rryl:$DB_PASSWORD@loan-me.vvstg7n.mongodb.net/?retryWrites=true&w=majority

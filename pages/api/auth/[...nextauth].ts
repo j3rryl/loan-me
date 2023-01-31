@@ -42,7 +42,7 @@ export default NextAuth({
           throw new Error("Email is not registered");
         }
 
-        // Check hased password with DB hashed password
+        // Check hashed password with DB hashed password
         const isPasswordCorrect = await compare(
           credentials!.password,
           user.hashedPassword

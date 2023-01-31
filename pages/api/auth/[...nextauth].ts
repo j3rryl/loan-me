@@ -11,10 +11,6 @@ import {compare} from 'bcrypt'
 
 export default NextAuth({
     providers: [
-        GithubProvider({
-      clientId: `${process.env.GITHUB_CLIENT_ID}`,
-      clientSecret: `${process.env.GITHUB_CLIENT_SECRET}`,
-    }),
      // Email & Password
      CredentialsProvider({
       id: "credentials",
@@ -56,21 +52,27 @@ export default NextAuth({
         return user;
       },
     }),
-    
-    // GoogleProvider({
-    //   clientId: '',
-    //   clientSecret: '',
-    // }),
-    ],
-    debug: process.env.NODE_ENV==="development",
-    adapter:MongoDBAdapter(clientPromise, {
-      databaseName: "loan-me-db",
+    GithubProvider({
+      clientId: `${process.env.GITHUB_CLIENT_ID}`,
+      clientSecret: `${process.env.GITHUB_CLIENT_SECRET}`,
     }),
-    session: {
-      strategy: "jwt",
-    },
-    jwt: {
-      secret: process.env.JWT_AUTH_SECRET,
-    },
-    secret: process.env.NEXTAUTH_SECRET,
+    GoogleProvider({
+      clientId: '',
+      clientSecret: '',
+    }),
+    ],
+    // pages:{
+    //   signIn:"/auth"
+    // },
+    debug: process.env.NODE_ENV==="development",
+    // adapter:MongoDBAdapter(clientPromise, {
+      // databaseName: "loan-me-db",
+    // }),
+    // session: {
+    //   strategy: "jwt",
+    // },
+    // jwt: {
+    //   secret: process.env.JWT_AUTH_SECRET,
+    // },
+    // secret: process.env.NEXTAUTH_SECRET,
 })

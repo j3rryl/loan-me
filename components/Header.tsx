@@ -36,10 +36,10 @@ const Header = () => {
                         }>
                         Sign In
                     </button> */}
-                    <Link href='/api/auth/signin' 
+                    <Link href='/authentication/login' 
                     onClick={(e) => {
-                    e.preventDefault()
-                        signIn()
+                    // e.preventDefault()
+                    //     signIn()
                         }
                     }
                     >

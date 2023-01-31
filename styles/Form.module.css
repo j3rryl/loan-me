@@ -1,0 +1,32 @@
+.formcontroller{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.formcontrol{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2rem 0;
+}
+.inputcontrol{
+    width: 80%;
+    color: black;
+    border-radius: 12px;
+    border: 1px solid black;
+    padding: .5rem;
+    margin: .75rem 0;
+    text-align: center;
+}
+.submit{
+    padding: .75rem 2rem;
+    margin: 1rem 0;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+.submit:hover{
+    cursor: pointer;
+}
+.authbuttons{
+    background-color: #24292E;
+    color: white;
+}
